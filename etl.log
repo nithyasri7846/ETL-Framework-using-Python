@@ -1,0 +1,7 @@
+2026-01-22 19:37:07,885 | INFO | CSV_INGEST | Reading CSV file from data/sample.csv
+2026-01-22 19:37:07,892 | INFO | CSV_INGEST | Ingested 4 rows
+2026-01-22 19:44:01,052 | INFO | CSV_INGEST | Reading CSV file from data/sample.csv
+2026-01-22 19:44:01,056 | INFO | CSV_INGEST | Ingested 4 rows
+2026-01-22 20:05:36,487 | INFO | CSV_INGEST | Reading CSV file from data/sample.csv
+2026-01-22 20:05:36,514 | INFO | CSV_INGEST | Ingested 4 rows
+2026-01-22 20:05:36,749 | INFO | DB_LOADER | 3 rows inserted into staging.sample_data

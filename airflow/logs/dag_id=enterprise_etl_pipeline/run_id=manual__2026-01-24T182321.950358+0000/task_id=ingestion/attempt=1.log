@@ -1,0 +1,16 @@
+[2026-01-24T18:23:36.730+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: enterprise_etl_pipeline.ingestion manual__2026-01-24T18:23:21.950358+00:00 [queued]>
+[2026-01-24T18:23:36.740+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: enterprise_etl_pipeline.ingestion manual__2026-01-24T18:23:21.950358+00:00 [queued]>
+[2026-01-24T18:23:36.741+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 3
+[2026-01-24T18:23:36.759+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): ingestion> on 2026-01-24 18:23:21.950358+00:00
+[2026-01-24T18:23:36.775+0000] {standard_task_runner.py:60} INFO - Started process 81 to run task
+[2026-01-24T18:23:36.854+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'enterprise_etl_pipeline', 'ingestion', 'manual__2026-01-24T18:23:21.950358+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/enterprise_etl_dag.py', '--cfg-path', '/tmp/tmpn6vvt45y']
+[2026-01-24T18:23:37.068+0000] {standard_task_runner.py:88} INFO - Job 50: Subtask ingestion
+[2026-01-24T18:23:37.698+0000] {task_command.py:423} INFO - Running <TaskInstance: enterprise_etl_pipeline.ingestion manual__2026-01-24T18:23:21.950358+00:00 [running]> on host 10cc583a452c
+[2026-01-24T18:23:37.980+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='enterprise_etl_pipeline' AIRFLOW_CTX_TASK_ID='ingestion' AIRFLOW_CTX_EXECUTION_DATE='2026-01-24T18:23:21.950358+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-24T18:23:21.950358+00:00'
+[2026-01-24T18:23:37.982+0000] {logging_mixin.py:188} INFO - Ingestion started
+[2026-01-24T18:23:37.982+0000] {logging_mixin.py:188} INFO - Reading source data
+[2026-01-24T18:23:37.983+0000] {logging_mixin.py:188} INFO - Ingestion completed
+[2026-01-24T18:23:37.983+0000] {python.py:202} INFO - Done. Returned value was: None
+[2026-01-24T18:23:37.993+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=enterprise_etl_pipeline, task_id=ingestion, execution_date=20260124T182321, start_date=20260124T182336, end_date=20260124T182337
+[2026-01-24T18:23:38.051+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-01-24T18:23:38.078+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

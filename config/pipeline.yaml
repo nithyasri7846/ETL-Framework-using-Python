@@ -1,0 +1,12 @@
+source:
+  type: csv
+  path: data/sample.csv
+
+cleaning:
+  drop_duplicates: true
+  fillna: mean
+
+validation:
+  not_null:
+    - id
+    - email

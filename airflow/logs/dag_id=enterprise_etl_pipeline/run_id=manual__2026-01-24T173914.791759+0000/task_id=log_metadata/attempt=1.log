@@ -1,0 +1,28 @@
+[2026-01-24T17:39:49.695+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: enterprise_etl_pipeline.log_metadata manual__2026-01-24T17:39:14.791759+00:00 [queued]>
+[2026-01-24T17:39:49.704+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: enterprise_etl_pipeline.log_metadata manual__2026-01-24T17:39:14.791759+00:00 [queued]>
+[2026-01-24T17:39:49.705+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 3
+[2026-01-24T17:39:49.720+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): log_metadata> on 2026-01-24 17:39:14.791759+00:00
+[2026-01-24T17:39:49.726+0000] {standard_task_runner.py:60} INFO - Started process 465 to run task
+[2026-01-24T17:39:49.731+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'enterprise_etl_pipeline', 'log_metadata', 'manual__2026-01-24T17:39:14.791759+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/enterprise_etl_dag.py', '--cfg-path', '/tmp/tmpmf7ppzbb']
+[2026-01-24T17:39:49.733+0000] {standard_task_runner.py:88} INFO - Job 26: Subtask log_metadata
+[2026-01-24T17:39:49.785+0000] {task_command.py:423} INFO - Running <TaskInstance: enterprise_etl_pipeline.log_metadata manual__2026-01-24T17:39:14.791759+00:00 [running]> on host cc61d4aa4ed7
+[2026-01-24T17:39:49.889+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='enterprise_etl_pipeline' AIRFLOW_CTX_TASK_ID='log_metadata' AIRFLOW_CTX_EXECUTION_DATE='2026-01-24T17:39:14.791759+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-24T17:39:14.791759+00:00'
+[2026-01-24T17:39:49.891+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/enterprise_etl_dag.py", line 65, in log_success
+    log_pipeline_run(
+  File "/opt/airflow/etl/metadata/metadata_logger.py", line 5, in log_pipeline_run
+    duration = int((end_time - start_time).total_seconds())
+TypeError: can't subtract offset-naive and offset-aware datetimes
+[2026-01-24T17:39:49.940+0000] {taskinstance.py:1149} INFO - Marking task as UP_FOR_RETRY. dag_id=enterprise_etl_pipeline, task_id=log_metadata, execution_date=20260124T173914, start_date=20260124T173949, end_date=20260124T173949
+[2026-01-24T17:39:49.963+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 26 for task log_metadata (can't subtract offset-naive and offset-aware datetimes; 465)
+[2026-01-24T17:39:49.984+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-01-24T17:39:50.006+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

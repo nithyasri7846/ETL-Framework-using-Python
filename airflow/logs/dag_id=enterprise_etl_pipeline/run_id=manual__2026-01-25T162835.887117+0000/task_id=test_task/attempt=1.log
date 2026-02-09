@@ -1,0 +1,17 @@
+[2026-01-25T16:29:06.740+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: enterprise_etl_pipeline.test_task manual__2026-01-25T16:28:35.887117+00:00 [queued]>
+[2026-01-25T16:29:06.763+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: enterprise_etl_pipeline.test_task manual__2026-01-25T16:28:35.887117+00:00 [queued]>
+[2026-01-25T16:29:06.765+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 3
+[2026-01-25T16:29:06.805+0000] {taskinstance.py:2217} INFO - Executing <Task(BashOperator): test_task> on 2026-01-25 16:28:35.887117+00:00
+[2026-01-25T16:29:06.823+0000] {standard_task_runner.py:60} INFO - Started process 298 to run task
+[2026-01-25T16:29:06.838+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'enterprise_etl_pipeline', 'test_task', 'manual__2026-01-25T16:28:35.887117+00:00', '--job-id', '74', '--raw', '--subdir', 'DAGS_FOLDER/enterprise_etl_dag.py', '--cfg-path', '/tmp/tmpbtb8bm_y']
+[2026-01-25T16:29:06.846+0000] {standard_task_runner.py:88} INFO - Job 74: Subtask test_task
+[2026-01-25T16:29:07.045+0000] {task_command.py:423} INFO - Running <TaskInstance: enterprise_etl_pipeline.test_task manual__2026-01-25T16:28:35.887117+00:00 [running]> on host 4820519f00dc
+[2026-01-25T16:29:07.455+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='enterprise_etl_pipeline' AIRFLOW_CTX_TASK_ID='test_task' AIRFLOW_CTX_EXECUTION_DATE='2026-01-25T16:28:35.887117+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-25T16:28:35.887117+00:00'
+[2026-01-25T16:29:07.460+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-01-25T16:29:07.491+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "echo 'ETL pipeline working inside Docker'"]
+[2026-01-25T16:29:07.516+0000] {subprocess.py:86} INFO - Output:
+[2026-01-25T16:29:07.573+0000] {subprocess.py:93} INFO - ETL pipeline working inside Docker
+[2026-01-25T16:29:07.575+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-01-25T16:29:07.710+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=enterprise_etl_pipeline, task_id=test_task, execution_date=20260125T162835, start_date=20260125T162906, end_date=20260125T162907
+[2026-01-25T16:29:07.783+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-01-25T16:29:07.839+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
