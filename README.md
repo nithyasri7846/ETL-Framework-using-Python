@@ -1,18 +1,17 @@
 # Enterprise Data Cleaning & ETL Orchestration Framework using Python
 
-A **modular ETL (Extract–Transform–Load) framework** built with Python to design, execute, and monitor reliable data pipelines.  
-The framework supports clean separation of concerns, logging, configuration-driven execution, and workflow orchestration.
+A **modular ETL (Extract–Transform–Load) framework** built using Python to design, execute, and monitor reliable data pipelines.  
+This project focuses on clean separation of concerns, configuration-driven execution, centralized logging, and scalable data processing workflows.
 
 ---
 
 ## 📌 Key Features
 
-- Modular **Extract, Transform, Load** architecture  
-- Configuration-driven pipelines  
-- Centralized logging & error handling  
-- REST API support for triggering ETL jobs  
-- Workflow orchestration using **Apache Airflow**  
-- Dockerized setup for consistent environments  
+- Modular **Extract, Transform, Load (ETL)** architecture  
+- Configuration-driven pipeline execution  
+- Centralized logging and error handling  
+- Scalable design suitable for enterprise-style data workflows  
+- Easily extensible for orchestration and API integration  
 
 ---
 
@@ -21,39 +20,31 @@ The framework supports clean separation of concerns, logging, configuration-driv
 ### Core Language
 - Python 3.8+
 
-### ETL & Data Processing
+### Data Processing
 - Python (custom ETL modules)
 - Pandas
-- SQL / File-based sources (CSV)
-
-### Orchestration
-- Apache Airflow  
-- DAG-based scheduling and monitoring  
-
-### API Layer
-- Flask (REST API for triggering ETL jobs)
-
-### Containerization
-- Docker  
-- Docker Compose  
+- CSV / SQL-based data sources
 
 ### Logging & Configuration
 - Python `logging` module  
-- `.env` / config files for environment variables  
+- Config files for pipeline parameters  
+
+*(Airflow, Docker, and API layers can be integrated as future enhancements.)*
 
 ---
+
 ## 📁 Project Structure
 
 ```text
-├── airflow/          # Airflow DAGs for ETL orchestration
-├── api/              # Flask API for ETL triggers
-├── config/           # Configuration & environment files
-├── data/             # Input and processed data
-├── docker/           # Docker & docker-compose setup
 ├── etl/              # Core ETL logic (extract, transform, load)
-├── run_test.py       # Entry point to run ETL pipeline
+├── config/           # Configuration files
+├── data/             # Input and processed datasets
+├── run_test.py       # Entry point to execute the ETL pipeline
 ├── etl.log           # Application logs
-└── requirements.txt  # Python dependencies
+├── requirements.txt  # Python dependencies
+├── README.md         # Project documentation
+└── LICENSE           # MIT License
+
 
 ```
 
@@ -64,17 +55,28 @@ The framework supports clean separation of concerns, logging, configuration-driv
 ```bash
 python run_test.py
 ```
-
+### Ensure all dependencies are installed before execution:
+```bash
+pip install -r requirements.txt
+```
 ### Run with Docker & Airflow
 ```bash
 cd docker
 docker-compose up
 ```
+## Development & Agile Approach
 
+- The project was developed using a modular and iterative approach.
+- Each ETL stage (Extract, Transform, Load) is independently designed and tested.
+- Logging and configuration were added incrementally to improve reliability.
+- The framework is structured to support future extensions such as workflow orchestration and API triggers.
 
 ## Use Cases
 
-- Batch data processing pipelines
-- Academic ETL / Data Engineering projects
-- Backend data preprocessing systems
-- Airflow-based workflow orchestration demos
+- Academic ETL and data engineering projects.
+- Backend data preprocessing pipelines.
+- Demonstration of clean ETL framework design.
+- Foundation for workflow orchestration systems.
+
+## Author
+NITHYA SRI P R  ,  Infosys SpringBoard Internship
